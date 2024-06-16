@@ -1,0 +1,9 @@
+figure {
+    // Remove as margins do conteudo
+    margin: 0 0 -6px 0;
+    img {
+        // Deixa o conteudo respossivo
+        width: 100%;
+        max-width: 100%;
+    }
+}

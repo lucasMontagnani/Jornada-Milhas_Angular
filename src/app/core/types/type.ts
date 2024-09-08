@@ -16,3 +16,15 @@ export interface Depoimento {
     autoria: string;
     texto: string;
 }
+
+export interface PessoaUsuaria {
+    nome: string;
+    nascimento: string;
+    cpf: string;
+    telefone: string;
+    email: string;
+    senha: string;
+    cidade: string;
+    estado: UnidadeFederativa;
+    genero: string;
+  }

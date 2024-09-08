@@ -27,12 +27,20 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormBaseComponent } from './shared/form-base/form-base.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
 
 
 
@@ -56,9 +64,17 @@ import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-
         PromocoesComponent,
         DropdownUfComponent,
         DepoimentosComponent,
-        SeletorPassageiroComponent
+        SeletorPassageiroComponent,
+        LoginComponent,
+        FormBaseComponent,
+        CadastroComponent,
+        PerfilComponent
     ],
-    providers: [],
+    providers: [{
+        provide: HTTP_INTERCEPTORS,
+        useClass: AutenticacaoInterceptor,
+        multi: true
+    }],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -77,7 +93,10 @@ import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-
         MatDialogModule,
         MatAutocompleteModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatDividerModule,
+        MatRadioModule,
+        MatCheckboxModule
     ]
 })
 export class AppModule { }

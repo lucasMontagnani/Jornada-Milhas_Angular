@@ -1,7 +1,7 @@
 <app-banner src="assets/imagens/banner-homepage.png" alt="Banner da aplicação Jornada"></app-banner> 
 <app-container>
     <h2>Promoções</h2>
-    <app-form-busca></app-form-busca>
+    <app-form-busca (realizarBusca)="navegarParaBusca ($event)"></app-form-busca>
     <app-promocoes></app-promocoes>
     <h2>Depoimentos</h2>
     <app-depoimentos></app-depoimentos>

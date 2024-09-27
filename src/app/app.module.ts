@@ -41,7 +41,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
-
+import { BuscaComponent } from './pages/busca/busca.component';
+import { PassagemComponent } from './shared/passagem/passagem.component';
+import { FiltrosComplementaresComponent } from './shared/form-busca/filtros-complementares/filtros-complementares.component';
+import { ParadasComponent } from './shared/form-busca/filtros-complementares/paradas/paradas.component';
+import { LabelComponent } from './shared/form-busca/filtros-complementares/label/label.component';
+import { CompanhiasComponent } from './shared/form-busca/filtros-complementares/companhias/companhias.component';
+import { PrecosComponent } from './shared/form-busca/filtros-complementares/precos/precos.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { PassagemDestaqueComponent } from './shared/passagem-destaque/passagem-destaque.component';
 
 
 
@@ -68,7 +76,15 @@ import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interc
         LoginComponent,
         FormBaseComponent,
         CadastroComponent,
-        PerfilComponent
+        PerfilComponent,
+        BuscaComponent,
+        PassagemComponent,
+        FiltrosComplementaresComponent,
+        ParadasComponent,
+        LabelComponent,
+        CompanhiasComponent,
+        PrecosComponent,
+        PassagemDestaqueComponent
     ],
     providers: [{
         provide: HTTP_INTERCEPTORS,
@@ -96,7 +112,8 @@ import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interc
         ReactiveFormsModule,
         MatDividerModule,
         MatRadioModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatSliderModule
     ]
 })
 export class AppModule { }

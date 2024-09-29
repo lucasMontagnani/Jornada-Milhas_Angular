@@ -1,7 +1,10 @@
 # JornadaMilhas
 ### 💻 Sobre
-Projeto de estudos desenvolvido com base na formação da Alura em Aplicações Escaláveis com Angular.
+Projeto de estudos desenvolvido com base na formação da Alura em Aplicações Escaláveis com Angular. 
+O Projeto consiste em um sistema para uma agência de viagens chamada Jornada Milhas, que realiza a venda de passagens aérias dentro do território nascional. 
 
+Onde ao longo da formação pude explorar a componentização, criando interfaces modulares e de fácil manutenção, utilizando o Angular material.
+Além de criar e validar formulários, implementar autenticação para proteger a aplicação e fazer solicitações a APIs externas para obter, enviar e manipular os dados recebidos.
 
 ## 🔨 Funcionalidades desenvolvidas no projeto
 - [x] Controlar e validar formulários em Angular utilizando services

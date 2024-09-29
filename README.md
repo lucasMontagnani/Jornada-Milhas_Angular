@@ -1,27 +1,34 @@
 # JornadaMilhas
+### 💻 Sobre
+Projeto de estudos desenvolvido com base na formação da Alura em Aplicações Escaláveis com Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
-## Development server
+## 🔨 Funcionalidades desenvolvidas no projeto
+- [x] Controlar e validar formulários em Angular utilizando services
+- [x] Interação com API backend para buscar, filtrar e exibir dados de maneira eficaz
+- [x] Autenticação utilizando tokens JWT
+- [x] Guardas de rotas funcionais para restringir o acesso a determinadas partes da aplicação
+- [x] Interceptor de injeção de header de autenticação nas requisições
+- [x] Modularização para organizar sua aplicação de forma lógica e reutilizável
+- [x] Lazy Loading para melhorar o desempenho da aplicação ao carregar módulos sob demanda
+- [x] Interceptor para manipular globalmente as requisições HTTP, adicionando funcionalidades como tratamento de erros
+- [x] ESLint para manter o código limpo e consistente, garantindo a qualidade do projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✔️ Técnicas e tecnologias utilizadas
 
-## Code scaffolding
+- `Angular`
+- `Angular CLI`
+- `Angular Material`
+- `Figma`
+- `ESLint`
+- `Visual Studio Code`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## 🛠️ Abrir e rodar o projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve` para iniciar o projeto.
 
-## Running unit tests
+Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O backend utilizado você encontra [aqui](https://github.com/viniciosneves/jornada-milhas-api).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

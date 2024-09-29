@@ -1,4 +1,3 @@
-![Cadastro](https://github.com/user-attachments/assets/cf2508b2-8ad0-4968-a3a8-8b4174eaaced)# JornadaMilhas
 ### 💻 Sobre
 Projeto de estudos desenvolvido com base na formação da Alura em Aplicações Escaláveis com Angular.
 

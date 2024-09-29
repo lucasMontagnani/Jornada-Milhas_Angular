@@ -17,15 +17,15 @@ export class FiltrosComplementaresComponent {
 
   busca(){
     if(!this.formBuscaService.formEstaValido){
-      this.formBuscaService.formBusca.markAllAsTouched()
+      this.formBuscaService.formBusca.markAllAsTouched();
       window.scroll({
         top: 0,
         left: 0,
         behavior:'smooth'
-      })
-      return
+      });
+      return;
     }
-    this.realizarBusca.emit(this.formBuscaService.obterDadosBusca())
+    this.realizarBusca.emit(this.formBuscaService.obterDadosBusca());
   }
 
   limparFiltros(){
@@ -34,6 +34,6 @@ export class FiltrosComplementaresComponent {
       companhias: null,
       precoMin: this.passagemService.precoMin,
       precoMax: this.passagemService.precoMax,
-    })
+    });
   }
 }

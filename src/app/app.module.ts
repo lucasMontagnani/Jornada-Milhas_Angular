@@ -5,12 +5,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatSliderModule } from '@angular/material/slider';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
 import { HomeModule } from './home/home.module';
-import { BuscaModule } from './busca/busca.module';
 import { ErroModule } from './core/erro/erro.module';
 import { ErrosInterceptor } from './core/erro/erros.interceptor';
 

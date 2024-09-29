@@ -30,7 +30,7 @@ export class CadastroComponent {
         error: (err) => {
           console.log('Erro ao realizar cadastro', err);
         }
-      })
+      });
     }
   }
 }

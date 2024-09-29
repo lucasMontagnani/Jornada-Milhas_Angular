@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
 import { FormBuscaService } from 'src/app/core/services/form-busca.service';
 
 @Component({
@@ -10,14 +8,14 @@ import { FormBuscaService } from 'src/app/core/services/form-busca.service';
 })
 export class FormBuscaComponent {
   @Output() realizarBusca = new EventEmitter();
-  constructor(public formBuscaService : FormBuscaService) {}
+  constructor(public formBuscaService: FormBuscaService) {}
 
   buscar() {
     if (this.formBuscaService.formEstaValido) {
       const formBuscavalue = this.formBuscaService.obterDadosBusca();
       this.realizarBusca.emit(formBuscavalue);
     } else {
-      alert('O formulário precisa ser preenchido')
+      alert('O formulário precisa ser preenchido');
     }
   }
 }

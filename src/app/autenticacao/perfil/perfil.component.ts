@@ -19,7 +19,7 @@ export class PerfilComponent implements OnInit{
   token = '';
   nome = '';
   cadastro!: PessoaUsuaria;
-  form!: FormGroup<any> | null; 
+  form!: FormGroup | null; 
 
   constructor(
     private tokenService: TokenService, 
@@ -52,7 +52,7 @@ export class PerfilComponent implements OnInit{
         cidade: this.cadastro.cidade,
         estado: this.cadastro.estado,
         genero: this.cadastro.genero
-    })
+    });
   }
 
   atualizar() {
@@ -71,13 +71,13 @@ export class PerfilComponent implements OnInit{
 
     this.cadastroService.editarCadastro(dadosAtualizados, /*this.token*/).subscribe({
       next: () => {
-          alert('Cadastro editado com sucesso')
+          alert('Cadastro editado com sucesso');
           this.router.navigate(['/']);
       },
       error: (err) => {
-          console.log(err)
+          console.log(err);
       }
-    })
+    });
   }
 
   deslogar() {

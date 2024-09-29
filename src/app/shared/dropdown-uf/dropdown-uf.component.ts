@@ -10,9 +10,9 @@ import { UnidadeFederativa } from 'src/app/core/types/type';
   styleUrls: ['./dropdown-uf.component.scss']
 })
 export class DropdownUfComponent implements OnInit{
-  @Input() label: string = '';
-  @Input() iconePrefixo: string = ''
-  @Input() placeholder: string = ''
+  @Input() label = '';
+  @Input() iconePrefixo = '';
+  @Input() placeholder = '';
   @Input() control!: FormControl;
   
   unidadesFederativas: UnidadeFederativa[] = [];
@@ -25,7 +25,7 @@ export class DropdownUfComponent implements OnInit{
   ngOnInit(): void {
     this.unidadeFederativaService.listar()
       .subscribe(dados => {
-        this.unidadesFederativas = dados
+        this.unidadesFederativas = dados;
       });
 
       this.filteredOptions$ = this.control.valueChanges.pipe(
@@ -39,8 +39,8 @@ export class DropdownUfComponent implements OnInit{
     const valorFiltrado = nomeUf?.toLowerCase();
     const result = this.unidadesFederativas.filter(
       estado => estado.nome.toLowerCase().includes(valorFiltrado)
-    )
-    return result
+    );
+    return result;
   }
 
   displayFn(estado: UnidadeFederativa): string {

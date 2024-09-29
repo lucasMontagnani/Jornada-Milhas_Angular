@@ -7,18 +7,16 @@ const KEY = 'token';
 })
 export class TokenService {
 
-  constructor() { }
-
   salvarToken(token: string) {
-    return localStorage.setItem(KEY, token)
+    return localStorage.setItem(KEY, token);
   }
 
   excluirToken() {
-    localStorage.removeItem(KEY)
+    localStorage.removeItem(KEY);
   }
 
   retornarToken() {
-    return localStorage.getItem(KEY) ?? ''
+    return localStorage.getItem(KEY) ?? '';
   }
   
   possuiToken() {

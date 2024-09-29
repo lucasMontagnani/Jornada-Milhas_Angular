@@ -17,8 +17,8 @@ export class DepoimentosComponent implements OnInit {
     this.service.listar().subscribe(
       res => {
         this.depoimentos = res;
-        console.log("DEPOIMENTOS", res)
+        console.log("DEPOIMENTOS", res);
       }
-    )
+    );
   }
 }

@@ -38,17 +38,17 @@ export class FormBuscaService {
       somenteIda.valueChanges.subscribe(somenteIda => {
         if(somenteIda){
           dataVolta.disable();
-          dataVolta.setValidators(null)
+          dataVolta.setValidators(null);
         } else{
           dataVolta.enable();
-          dataVolta.setValidators([Validators.required])
+          dataVolta.setValidators([Validators.required]);
         }
-        dataVolta.updateValueAndValidity
+        dataVolta.updateValueAndValidity;
       });
   }
 
   getDescricaoPassageiros (): string {
-    let descricao = ''
+    let descricao = '';
 
     const adultos = this.formBusca.get('adultos')?.value;
     if (adultos && adultos > 0) {
@@ -65,10 +65,10 @@ export class FormBuscaService {
       descricao += `${descricao ? ', ' : ''}${bebes} bebê${bebes > 1 ? 's' : ''}`;
     }
   
-    return descricao
+    return descricao;
   }
 
-   obterControle<T>(nome:string): FormControl {
+   obterControle<T>(nome: string): FormControl {
     const control = this.formBusca.get(nome);
     if (!control) {
       throw new Error(`FormControl com nome "${nome}" não existe.`);
@@ -88,7 +88,7 @@ export class FormBuscaService {
       passageirosCriancas: this.obterControle<number>('criancas').value,
       passageirosBebes: this.obterControle<number>('bebes').value,
       dataIda: this.obterControle<Date>('dataIda').value.toISOString()
-    }
+    };
 
     const dataVoltaControl = this.obterControle<Date>('dataVolta');
     if (dataVoltaControl.value) {
@@ -102,17 +102,17 @@ export class FormBuscaService {
 
     const companhiasControl = this.obterControle<number[]>('companhias');
     if(companhiasControl.value){
-      dadosBusca.companhiasId = companhiasControl.value
+      dadosBusca.companhiasId = companhiasControl.value;
     }
 
-    const precoMinControl = this.obterControle<number>('precoMin')
+    const precoMinControl = this.obterControle<number>('precoMin');
     if(precoMinControl.value){
-      dadosBusca.precoMin = precoMinControl.value
+      dadosBusca.precoMin = precoMinControl.value;
     }
     
-    const precoMaxControl = this.obterControle<number>('precoMax')
+    const precoMaxControl = this.obterControle<number>('precoMax');
     if(precoMaxControl.value){
-      dadosBusca.precoMax = precoMaxControl.value
+      dadosBusca.precoMax = precoMaxControl.value;
     }
 
     return dadosBusca;
@@ -130,7 +130,7 @@ export class FormBuscaService {
     if (evento.selected) {
       this.formBusca.patchValue({
         tipo
-      })
+      });
     }
   }
 
@@ -145,6 +145,6 @@ export class FormBuscaService {
   }
 
   get formEstaValido() {
-    return this.formBusca.valid
+    return this.formBusca.valid;
   }
 }

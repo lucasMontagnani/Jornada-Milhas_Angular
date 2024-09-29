@@ -40,6 +40,6 @@ export class ErrosInterceptor implements HttpInterceptor {
           
           return throwError (() => new Error('Ops, ocorreu um erro!'));
       })
-    )
+    );
   }
 }

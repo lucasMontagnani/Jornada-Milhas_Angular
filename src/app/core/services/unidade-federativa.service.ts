@@ -9,7 +9,7 @@ import { UnidadeFederativa } from '../types/type';
 })
 export class UnidadeFederativaService {
 
-  private apiUrl: string = environment.apiUrl
+  private apiUrl: string = environment.apiUrl;
   private cache$?: Observable<UnidadeFederativa[]>;
 
   constructor(
@@ -17,7 +17,7 @@ export class UnidadeFederativaService {
   ) { 
   }
 
-  listar() : Observable<UnidadeFederativa[]> {
+  listar(): Observable<UnidadeFederativa[]> {
     if (!this.cache$) {
       this.cache$ = this.requestEstados().pipe(
         shareReplay(1)

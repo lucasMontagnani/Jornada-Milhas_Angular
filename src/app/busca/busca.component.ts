@@ -17,37 +17,37 @@ export class BuscaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const buscaPadrao : DadosBusca = {
+    const buscaPadrao: DadosBusca = {
       dataIda: new Date().toISOString(),
       pagina: 1,
       porPagina: 25,
       somenteIda: false,
       passageirosAdultos: 1,
       tipo: "Executiva"
-    }
+    };
 
-    const busca = this.formBuscaService.formEstaValido ? this.formBuscaService.obterDadosBusca() : buscaPadrao
+    const busca = this.formBuscaService.formEstaValido ? this.formBuscaService.obterDadosBusca() : buscaPadrao;
     this.passagensService.getPassagens(busca)
     .pipe(take(1))
     .subscribe(
       res => {
-        this.passagens = res.resultado
+        this.passagens = res.resultado;
         
         this.formBuscaService.formBusca.patchValue({
           precoMin: res.precoMin,
           precoMax: res.precoMax,
-        })
-        this.obterDestaques()
+        });
+        this.obterDestaques();
       }
-    )
+    );
   }
 
   busca(ev: DadosBusca) {
     this.passagensService.getPassagens(ev).subscribe(
       res => {
-        console.log(res)
-        this.passagens = res.resultado
-      })
+        console.log(res);
+        this.passagens = res.resultado;
+      });
   }
 
   obterDestaques(){

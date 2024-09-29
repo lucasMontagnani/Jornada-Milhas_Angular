@@ -13,7 +13,7 @@ export class DepoimentoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listar () : Observable<Depoimento[]> {
-    return this.httpClient.get<Depoimento[]>(`${this.apiUrl}/depoimentos`)
+  listar (): Observable<Depoimento[]> {
+    return this.httpClient.get<Depoimento[]>(`${this.apiUrl}/depoimentos`);
   }
 }

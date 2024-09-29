@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormularioService } from 'src/app/core/services/formulario.service';
 import { UnidadeFederativa } from 'src/app/core/types/type';
@@ -9,12 +9,12 @@ import { FormValidations } from '../form-validation';
   templateUrl: './form-base.component.html',
   styleUrls: ['./form-base.component.scss']
 })
-export class FormBaseComponent {
+export class FormBaseComponent implements OnInit {
   @Input() perfilComponent!: boolean;
-  @Input() titulo: string = 'Crie sua conta';
-  @Input() buttonText: string = 'Cadastrar';
-  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();
-  @Output() sair: EventEmitter<any> = new EventEmitter<any>();
+  @Input() titulo = 'Crie sua conta';
+  @Input() buttonText = 'Cadastrar';
+  @Output() acaoClique: EventEmitter<void> = new EventEmitter<void>();
+  @Output() sair: EventEmitter<void> = new EventEmitter<void>();
 
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<UnidadeFederativa | null>(null, Validators.required);
@@ -41,9 +41,9 @@ export class FormBaseComponent {
     });
 
     if(this.perfilComponent) {
-      this.cadastroForm.get('aceitarTermos')?.setValidators (null)
+      this.cadastroForm.get('aceitarTermos')?.setValidators (null);
     } else {
-      this.cadastroForm.get('aceitarTermos')?.setValidators ([Validators.requiredTrue])
+      this.cadastroForm.get('aceitarTermos')?.setValidators ([Validators.requiredTrue]);
     }
     this.cadastroForm.get('aceitarTermos')?.updateValueAndValidity();
 

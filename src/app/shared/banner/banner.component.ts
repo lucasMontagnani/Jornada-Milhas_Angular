@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class BannerComponent {
   // O decorator INPUT() vai sinalizar para o Angular que essa é uma propriedade de entrada, que esses valores serão recebidos e injetados nesse componente.
   // É tilizado o decorador @Input() para definir que elas serão preenchidas pelo componente pai
-  @Input() src: string = ''
-  @Input() alt: string = ''
+  @Input() src = '';
+  @Input() alt = '';
 }
